@@ -17,3 +17,12 @@ end
 get '/profile/' do
 	erb :profile
 end
+
+post '/sign-up' do
+	@newUser = User.create(username: params[:username], password: params[:password])
+	if @newUser == User.where(username: params[:username])
+		redirect '/'
+	else
+		#this might not be neccearily correct.
+		redirect '/profile'
+end

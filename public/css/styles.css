@@ -1803,6 +1803,11 @@ a.ui-button:active,
   -webkit-box-shadow: -4px -4px 4px #aaaaaa;
   box-shadow: -4px -4px 4px #aaaaaa; }
 
+#signup {
+  padding-top: 25%;
+  padding-left: 15%; }
+
+
 #nav {
   height: 10%;
   background-color: #ff8c00; }
@@ -1879,5 +1884,6 @@ a:hover {
   overflow: visible;
   background-repeat: no-repeat;
   background-size: 250px 200px; }
+
 
 /*# sourceMappingURL=styles.css.map */

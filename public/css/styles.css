@@ -1803,6 +1803,10 @@ a.ui-button:active,
   -webkit-box-shadow: -4px -4px 4px #aaaaaa;
   box-shadow: -4px -4px 4px #aaaaaa; }
 
+#signup {
+  padding-top: 200px;
+  padding-left: 100px; }
+
 body {
   background-color: white; }
 

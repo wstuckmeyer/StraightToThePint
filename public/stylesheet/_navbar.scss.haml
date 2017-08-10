@@ -1,0 +1,94 @@
+$burnt-orange: #ff8c00;
+$yellow: #fecb01;
+$brown: #b44601;
+$light-green: #bdc901;
+$dark-green: #8aab00;
+
+#nav{
+	height:10%;
+	background-color:$burnt-orange;
+
+	ul{
+		list-style:none;
+		display:inline-block;
+		margin:0;
+		padding:0;
+		float:right;
+		word-spacing:5%;
+		text-decoration: none;
+		color:#FFFFFF;
+		margin-top:1%;
+		li{
+			font-size: 2em;
+			color:#FFFFFF;
+			display:inline;
+			padding-left:10px;
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#myModal{
+	text-align: center;
+	width:40%;
+	height:20%;
+	position: fixed;
+    right:30%;
+    top:20%;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+    background-color: $burnt-orange;
+    box-shadow: 0 0 40px black;
+    overflow:scroll;
+    #modalHead{
+		margin-top:50px;
+		font-size:4em;
+		color:$burnt-orange;
+			
+}
+	
+}
+#blur{
+	width:100%;
+	height:100%;
+	z-index: 2;
+	background-color: black;
+	top:0;
+	display:none;
+	position:fixed;
+	opacity:0.5;
+}
+
+#label{
+	color:$burnt-orange;
+	font-size: 4em;
+}
+#emailInput{
+	font-size:3em;
+	color:$burnt-orange;
+	height:40%;
+	width:40%;
+}
+
+#openModal{
+	margin-left:42%;
+	font-size:2em;
+	width:17%;
+	height:8%;
+}
+
+a:hover{
+	color:#000000;
+	cursor:pointer;
+}	
+#logo{
+		background-image: url('../images/beerman3.png');
+		background-position:center;
+		height:20vh;
+		overflow:visible;
+		background-repeat:no-repeat;
+		background-size:250px 200px;
+	}

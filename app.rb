@@ -14,6 +14,17 @@ get '/sign-up' do
 	erb :signUp
 end
 
-get '/profile/' do
+get '/profile' do
+	
 	erb :profile
+end
+
+post '/' do
+	@user = User.where(username: params[:username]).first
+	if @user.password == params[:password]
+		redirect '/profile'
+	else
+		redirect '/'
+	end
+	
 end

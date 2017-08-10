@@ -5,7 +5,36 @@
 	<link rel="stylesheet" type="text/css" href="<%= url('css/styles.css') %>">
 </head>
 <body>
+	<nav id='nav'>
+		<div class='row'>
+			<div class ='col-4'></div>
+			<div class='col-4' id='logo'>
+			</div>
+			<div class='col-4' id='links'>
+				<ul>
+					<li><a href='/'>Home</a><li>
+					<li><a id='sign-in'>Sign In</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 	<%= yield %>
+
+	<container id='blur'></container>
+	<div id="myModal">
+		<container id="modalContent">
+			<h1>Sign In</h1>
+				<form method="POST" action='/'>
+					<label for='username'>Username</label>
+					<input type="text" name="username" id="username">
+					<label for='password'>Password</label>
+					<input type='text' name='password' id='password'>
+					<input type="submit" value="Submit">
+			</form>
+			</container>
+		</div>
+	</div>
 
 <script type="text/javascript" src="<%= url('scripts/jquery-3.js') %>" ></script>
 <script

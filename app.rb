@@ -23,6 +23,8 @@ end
 
 get '/profile/:id' do
 	@user = User.find(params[:id])
+	@title = Post.where(title: params[:title])
+	@content = Post.where(content: params[:content])
 	erb :show
 end
 
@@ -52,3 +54,7 @@ post '/' do
 	end
 end
 
+post '/profile/:id' do
+	@newTitle = Post.create(title: params[:title])
+	@newContent = Post.create(title: params[:title])
+end

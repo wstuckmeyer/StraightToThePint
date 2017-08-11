@@ -32,7 +32,9 @@ end
 
 post '/' do
 	@user = User.where(username: params[:username]).first
-	if @user.password == params[:password]
+	if @user == nil
+		redirect '/sign-up'
+	elsif @user.password == params[:password]
 		redirect '/profile'
 	else
 		redirect '/'

@@ -1,4 +1,15 @@
+$burnt-orange: #ff8c00;
+$yellow: #fecb01;
+$brown: #b44601;
+$light-green: #bdc901;
+$dark-green: #8aab00;
+
 #signup{
-	padding-top: 25%;
+	background-color: $brown;
+	padding-top: 10%;
 	padding-left: 15%;
+	padding-bottom:10%;
+	border: solid;
+	border-width: 10px;
+	border-color: $burnt-orange;
 }

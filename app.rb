@@ -7,6 +7,12 @@ enable :sessions
 
 require './models'
 
+def page_content(title)
+  File.read("pages/#{title}.txt")
+rescue Errno::ENOENT
+  return nil
+end
+
 get '/' do
 	erb :home
 end
@@ -17,6 +23,8 @@ end
 
 get '/profile/:id' do
 	@user = User.find(params[:id])
+	@title = Post.where(title: params[:title])
+	@content = Post.where(content: params[:content])
 	erb :show
 end
 
@@ -38,6 +46,7 @@ post '/' do
 	if @user == nil
 		redirect '/sign-up'
 	elsif @user.password == params[:password]
+
 		session[:user_id] = @user.id
 		redirect '/profile/' + @user.id.to_s
 	else
@@ -45,3 +54,7 @@ post '/' do
 	end
 end
 
+post '/profile/:id' do
+	@newTitle = Post.create(title: params[:title])
+	@newContent = Post.create(title: params[:title])
+end

@@ -6,6 +6,12 @@ set :database , 'sqlite3:keg.sqlite3'
 
 require './models'
 
+def page_content(title)
+  File.read("pages/#{title}.txt")
+rescue Errno::ENOENT
+  return nil
+end
+
 get '/' do
 	erb :home
 end
@@ -32,7 +38,9 @@ end
 
 post '/' do
 	@user = User.where(username: params[:username]).first
-	if @user.password == params[:password]
+	if @user == nil
+		redirect '/sign-up'
+	elsif @user.password == params[:password]
 		redirect '/profile'
 	else
 		redirect '/'

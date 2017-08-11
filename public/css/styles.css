@@ -1804,10 +1804,6 @@ a.ui-button:active,
   box-shadow: -4px -4px 4px #aaaaaa; }
 
 #signup {
-<<<<<<< HEAD
-  padding-top: 25%;
-  padding-left: 15%; }
-=======
   background-color: #b44601;
   padding-top: 10%;
   padding-left: 15%;
@@ -1815,7 +1811,6 @@ a.ui-button:active,
   border: solid;
   border-width: 10px;
   border-color: #ff8c00; }
->>>>>>> master
 
 #nav {
   height: 10%;
@@ -1896,7 +1891,6 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 250px 200px; }
 
-<<<<<<< HEAD
 #left-logo {
   background-image: url("../images/logo3.png");
   background-repeat: no-repeat;
@@ -1937,6 +1931,4 @@ button {
 .c-rating__item.is-active {
   background-position: -24px 0; }
 
-=======
->>>>>>> master
 /*# sourceMappingURL=styles.css.map */

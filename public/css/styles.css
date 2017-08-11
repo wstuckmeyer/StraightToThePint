@@ -1807,7 +1807,6 @@ a.ui-button:active,
   padding-top: 25%;
   padding-left: 15%; }
 
-
 #nav {
   height: 10%;
   background-color: #ff8c00; }
@@ -1820,7 +1819,7 @@ a.ui-button:active,
     word-spacing: 5%;
     text-decoration: none;
     color: #FFFFFF;
-    margin-top: 1%; }
+    margin-top: 3%; }
     #nav ul li {
       font-size: 2em;
       color: #FFFFFF;
@@ -1878,6 +1877,8 @@ a:hover {
   cursor: pointer; }
 
 #logo {
+  position: relative;
+  right: 12px;
   background-image: url("../images/beerman3.png");
   background-position: center;
   height: 20vh;
@@ -1885,5 +1886,44 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 250px 200px; }
 
+#left-logo {
+  background-image: url("../images/logo3.png");
+  background-repeat: no-repeat;
+  height: 20vh;
+  margin-top: -2.4%;
+  left: 12px; }
+
+button {
+  width: 10%;
+  height: 5%;
+  background-color: #bdc901; }
+
+/* -----------------------------------------------------------------------------
+
+  COMPENENTS - RATING
+  
+----------------------------------------------------------------------------- */
+.c-rating {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.c-rating__item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 24px;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  background: url("../img/stars.svg");
+  background-position: 0 0;
+  cursor: pointer; }
+
+.c-rating__item:hover,
+.c-rating__item.is-active {
+  background-position: -24px 0; }
 
 /*# sourceMappingURL=styles.css.map */

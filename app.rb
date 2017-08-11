@@ -3,6 +3,7 @@ require 'sinatra/activerecord'
 require 'sinatra/flash'
 
 set :database , 'sqlite3:keg.sqlite3'
+enable :sessions
 
 require './models'
 
@@ -14,10 +15,11 @@ get '/sign-up' do
 	erb :signUp
 end
 
-get '/profile' do
-	
-	erb :profile
+get '/profile/:id' do
+	@user = User.find(params[:id])
+	erb :show
 end
+
 
 
 post '/sign-up' do
@@ -25,16 +27,21 @@ post '/sign-up' do
 	if @newUser == User.where(username: params[:username])
 		redirect '/'
 	else
-		#this might not be neccearily correct.
-		redirect '/profile'
+		@user = User.where(username: params[:username]).first
+		session[:user_id] = @user.id
+		redirect '/profile/' + @user.id.to_s
   end
 end
 
 post '/' do
 	@user = User.where(username: params[:username]).first
-	if @user.password == params[:password]
-		redirect '/profile'
+	if @user == nil
+		redirect '/sign-up'
+	elsif @user.password == params[:password]
+		session[:user_id] = @user.id
+		redirect '/profile/' + @user.id.to_s
 	else
 		redirect '/'
 	end
 end
+

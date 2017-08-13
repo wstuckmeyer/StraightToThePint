@@ -1,5 +1,49 @@
-<%= session[:user_id] %>
+
 <button id='makePost'>Create Post</button>
+
+<%@reverse.each do |t| %>
+
+<div class='row posts'>
+	<div class='col-4'></div>
+	<div class='col-4 postStuff'>
+<h1><%=t.title%></h1>
+<p><%=t.content%></p>
+</div>
+</div>
+<%end%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <container id='blur2'></container>
 	<div id="postModal">
@@ -10,10 +54,12 @@
 					<input type="text" name="title" id="title">
 					<br>
 					<label for='password'>Content</label>
-					<input type='textarea' name='title' id='content'>
+					<textarea id='content' name='content'></textarea>
 					<br>
 					<button type="submit" value="Submit" is='submit'>Post</button>
 			</form>
 			</container>
 		</div>
 	</div>
+
+	

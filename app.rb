@@ -39,7 +39,7 @@ post '/sign-up' do
 end
 
 post '/' do
-
+	
 	@user = User.where(username: params[:username]).first
 	if @user == nil
 		redirect '/sign-up'

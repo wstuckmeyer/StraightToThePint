@@ -10,7 +10,12 @@ $brown: #b44601;
 $light-green: #bdc901;
 $dark-green: #8aab00;
 
-
+body{
+	background-color:#E6ECF0;
+}
+.postStuff{
+	position:relative;
+}
 #postModal{
 	text-align: center;
 	width:40%;
@@ -62,6 +67,20 @@ $dark-green: #8aab00;
 }
 
 .postStuff{
+	width:40%;
+	height:50%;
+	color:black;
+	background-color:#FFFFFF;
 	text-align:center;
-	background-color:$burnt-orange;
+}
+.postHead{
+	margin-left:30%;
+	text-align:center;
+	color:black;
+	width:40%;
+	border-bottom:1px solid black;
+
+}
+.postBody{
+	color:black;
 }

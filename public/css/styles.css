@@ -1848,7 +1848,8 @@ a.ui-button:active,
 
 #nav {
   height: 10%;
-  background-color: #ff8c00; }
+  background-color: #ff8c00;
+  margin-bottom: 122px; }
   #nav ul {
     list-style: none;
     display: inline-block;
@@ -1993,6 +1994,12 @@ button {
   position: fixed;
   opacity: 0.5; }
 
+body {
+  background-color: #E6ECF0; }
+
+.postStuff {
+  position: relative; }
+
 #postModal {
   text-align: center;
   width: 40%;
@@ -2038,7 +2045,20 @@ button {
   height: 8%; }
 
 .postStuff {
+  width: 40%;
+  height: 50%;
+  color: black;
+  background-color: #FFFFFF;
+  text-align: center; }
+
+.postHead {
+  margin-left: 30%;
   text-align: center;
-  background-color: #ff8c00; }
+  color: black;
+  width: 40%;
+  border-bottom: 1px solid black; }
+
+.postBody {
+  color: black; }
 
 /*# sourceMappingURL=styles.css.map */

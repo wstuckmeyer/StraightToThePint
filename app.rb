@@ -52,13 +52,12 @@ post '/' do
 	end
 end
 
-post '/profile/:id' do
+post '/profile/:id' do 
 	@newpost = Post.create(title: params[:title], content: params[:content], user_id: session[:user_id])
 	@user = session[:user_id]
 	redirect 'profile/' + @user.to_s
-	def update 
-	@editpost =	Post.update(title: params[:title], content: params[:content])
-	end
+	
 	erb :show
 
 end
+

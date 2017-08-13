@@ -1,4 +1,6 @@
-<% @postsr = Post.all.reverse %>
+
+
+<% @postsr = Post.last(10).reverse %>
 <% @postsr.each do |t| %>
 
 <div class='row posts'>

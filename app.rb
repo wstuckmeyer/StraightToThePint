@@ -22,9 +22,11 @@ get '/sign-up' do
 end
 
 get '/profile/:id' do
-	@user = User.find(params[:id])
+	@user = User.find(session[:user_id])
 	@title = Post.where(title: params[:title])
 	@content = Post.where(content: params[:content])
+	@post = Post.where(user_id: session[:user_id])
+	@reverse = @post.reverse
 	erb :show
 end
 
@@ -42,6 +44,7 @@ post '/sign-up' do
 end
 
 post '/' do
+
 	@user = User.where(username: params[:username]).first
 	if @user == nil
 		redirect '/sign-up'
@@ -55,6 +58,8 @@ post '/' do
 end
 
 post '/profile/:id' do
-	@newTitle = Post.create(title: params[:title])
-	@newContent = Post.create(title: params[:title])
+	@newpost = Post.create(title: params[:title], content: params[:content], user_id: session[:user_id])
+	@user = session[:user_id]
+	redirect 'profile/' + @user.to_s
+	erb :show
 end

@@ -3,6 +3,12 @@
 @import 'sign-up-form';
 @import 'navbar';
 @import 'rating';
+$burnt-orange: #ff8c00;
+$yellow: #fecb01;
+$brown: #b44601;
+$light-green: #bdc901;
+$dark-green: #8aab00;
+
 
 #postModal{
 	text-align: center;
@@ -52,4 +58,9 @@
 	font-size:2em;
 	width:17%;
 	height:8%;
+}
+
+.postStuff{
+	text-align:center;
+	background-color:$burnt-orange;
 }

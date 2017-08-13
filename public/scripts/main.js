@@ -8,6 +8,7 @@ $('#makePost').click(function(){
   $('#blur2').css('display', 'block');
   $('#postModal').css('display', 'block')
 })
+<<<<<<< HEAD
 
 //Script for the rating function
 // (function() {
@@ -181,3 +182,5 @@ $('#makePost').click(function(){
 //   window.rating = rating;
 
 // })();
+=======
+>>>>>>> master

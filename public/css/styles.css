@@ -1811,12 +1811,11 @@ a.ui-button:active,
   border: solid;
   border-width: 10px;
   border-color: #b44601;
-  box-shadow: 0 0px 20px black;
-  font-family: 'Arimo', sans-serif; }
+  box-shadow: 0 0px 20px black; }
 
 .signuplabel {
   padding: 10px;
-  font-family: 'Arimo', sans-serif; }
+  font-family: 'Black Ops One', cursive; }
 
 #editModal {
   text-align: center;

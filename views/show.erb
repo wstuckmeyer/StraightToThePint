@@ -4,6 +4,7 @@
 <%@reverse.each do |t| %>
 
 <div class='row posts'>
+<button class = "editPost">edit</button>
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
 <h1><%=t.title%></h1>
@@ -18,7 +19,22 @@
 
 
 
-
+<container id='blur3'></container>
+	<div id="editModal" style=>
+		<container id="editModalContent">
+			<h1>Edit a Post</h1>
+				<form method="POST" action='/profile/:id'>
+					<label for='username'>Title</label>
+					<input type="text" name="title" id="title">
+					<br>
+					<label for='content'>Content</label>
+					<textarea id='content' name='content'></textarea>
+					<br>
+					<button type="submit" value="Submit" id='submit'>Post</button>
+			</form>
+			</container>
+		</div>
+	</div>
 
 
 

@@ -1,28 +1,3 @@
-$burnt-orange: #ff8c00;
-$yellow: #fecb01;
-$brown: #b44601;
-$light-green: #bdc901;
-$dark-green: #8aab00;
-
-
-#signup{
-	background-color: $burnt-orange;
-	padding-top: 10%;
-	padding-left: 15%;
-	padding-bottom:10%;
-	border: solid;
-	border-width: 10px;
-	border-color: $brown;
-	box-shadow: 0 0px 20px black;
-	font-family: 'Arimo', sans-serif;
-}
-
-.signuplabel {
-	padding:10px;
-	font-family: 'Arimo', sans-serif;
-
-}
-
 #editModal{
 	text-align: center;
 	width:40%;

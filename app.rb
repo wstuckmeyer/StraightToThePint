@@ -7,11 +7,6 @@ enable :sessions
 
 require './models'
 
-def page_content(title)
-  File.read("pages/#{title}.txt")
-rescue Errno::ENOENT
-  return nil
-end
 
 get '/' do
 	erb :home
@@ -61,5 +56,9 @@ post '/profile/:id' do
 	@newpost = Post.create(title: params[:title], content: params[:content], user_id: session[:user_id])
 	@user = session[:user_id]
 	redirect 'profile/' + @user.to_s
+	def update 
+	@editpost =	Post.update(title: params[:title], content: params[:content])
+	end
 	erb :show
+
 end

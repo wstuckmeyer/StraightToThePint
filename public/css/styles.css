@@ -1804,13 +1804,47 @@ a.ui-button:active,
   box-shadow: -4px -4px 4px #aaaaaa; }
 
 #signup {
-  background-color: #b44601;
+  background-color: #ff8c00;
   padding-top: 10%;
   padding-left: 15%;
   padding-bottom: 10%;
   border: solid;
   border-width: 10px;
-  border-color: #ff8c00; }
+  border-color: #b44601;
+  box-shadow: 0 0px 20px black;
+  font-family: 'Arimo', sans-serif; }
+
+.signuplabel {
+  padding: 10px;
+  font-family: 'Arimo', sans-serif; }
+
+#editModal {
+  text-align: center;
+  width: 40%;
+  height: 20%;
+  position: fixed;
+  right: 30%;
+  top: 20%;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+  background-color: #ff8c00;
+  box-shadow: 0 0 40px black;
+  overflow: scroll; }
+  #editModal #modalHead {
+    margin-top: 50px;
+    font-size: 4em;
+    color: #ff8c00; }
+
+#blur3 {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: black;
+  top: 0;
+  display: none;
+  position: fixed;
+  opacity: 0.5; }
 
 #nav {
   height: 10%;
@@ -1930,6 +1964,34 @@ button {
 .c-rating__item:hover,
 .c-rating__item.is-active {
   background-position: -24px 0; }
+
+#editModal {
+  text-align: center;
+  width: 40%;
+  height: 20%;
+  position: fixed;
+  right: 30%;
+  top: 20%;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+  background-color: #ff8c00;
+  box-shadow: 0 0 40px black;
+  overflow: scroll; }
+  #editModal #modalHead {
+    margin-top: 50px;
+    font-size: 4em;
+    color: #ff8c00; }
+
+#blur3 {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: black;
+  top: 0;
+  display: none;
+  position: fixed;
+  opacity: 0.5; }
 
 #postModal {
   text-align: center;

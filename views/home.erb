@@ -4,11 +4,13 @@
 
 <% @postsr.each do |t| %>
 <% @user = User.find(t.user_id )%>
+<% @profile = Profile.find(@user.id) %>
 
 
 <div class='row posts'>
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
+		<img id='streamPhoto' src='<%= url(@profile.picture)%>'>
 		<h1 class='postHead'><%=t.title%></h1>
 		<h6>By: <%=@user.username%></h6>
 		<p class='postBody'><%=t.content%></p>
@@ -20,5 +22,10 @@
 
 
 	<footer >
-		<img id='footer' src='<%= url("images/bottles.png")%>'>
+		<div class='row'>
+			<div class='col-12'>
+				<img class='footer' src='<%= url("images/beers1.png")%>'>
+				<img class='footer' id='rightFoot' src='<%= url("images/beer2.png")%>'>
+			</div>
+		</div>
 	</footer>

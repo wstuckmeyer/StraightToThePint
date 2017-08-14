@@ -1995,18 +1995,27 @@ button {
   position: fixed;
   opacity: 0.5; }
 
+#footer {
+  height: 27vh;
+  width: 64%;
+  margin-left: 20%;
+  margin-top: 17%; }
+
 #profileSide {
   text-align: center;
-  height: 50%;
+  height: 60%;
   background-color: #ff8c00;
   position: fixed; }
+  #profileSide #profileImg {
+    height: 40%;
+    width: 240px;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 800px; }
 
 >>>>>>> master
 body {
   background-color: #E6ECF0; }
-
-.postStuff {
-  position: relative; }
 
 #postModal {
   text-align: center;
@@ -2054,7 +2063,7 @@ body {
   margin-left: 0; }
 
 .postStuff {
-  width: 40%;
+  width: 30%;
   height: 50%;
   color: black;
   background-color: #FFFFFF;

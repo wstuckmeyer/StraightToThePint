@@ -1,17 +1,12 @@
-<div class = "container">
-	<div class = "row">
-		<div class = "col-12">
-		<form id ="edit" method = "post" action = "/profile/:id">
-			<label class = editTitle for "EditTitle">Edit Title:</label>
-				<input type = "text" name= "EditTitle">
-			  <br>
-			<label class = signuplabel for "content">Edit your Content</label>
-			   <br>
-				<!-- add the style to css when ready -->
-			  <textarea name="content" style="margin: 0px; width: 585px; height: 179px;"></textarea>
-			  <br>
-			  <input class= "ui-button ui-widget ui-corner-all" type= "submit">
-		</form>
-		</div>
-	</div>
-</div>
+
+<% @post = Post.find(params[:id]) %>
+<form method="POST" action='/posts/<%=@post.id%>/edit'>
+	<label for='username'>Title</label>
+	<input type="text" name="title" id="title" placeholder="<%=@post.title%>">
+	<br>
+	<label for='password'>Content</label>
+	<textarea id='content' name='content' placeholder="<%=@post.content%>"></textarea>
+	<br>
+	<button type="submit" value="Submit" is='submit'>Post</button>
+</form>
+

@@ -1965,6 +1965,8 @@ button {
 .c-rating__item.is-active {
   background-position: -24px 0; }
 
+<<<<<<< HEAD
+=======
 #editModal {
   text-align: center;
   width: 40%;
@@ -1999,6 +2001,7 @@ button {
   background-color: #ff8c00;
   position: fixed; }
 
+>>>>>>> master
 body {
   background-color: #E6ECF0; }
 

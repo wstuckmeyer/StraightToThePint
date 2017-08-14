@@ -2,10 +2,12 @@
 	<div class='col-4' id='profileSide'>
 	<% @profile = Profile.find(session[:user_id])%>
 	<% @user = User.find(session[:user_id]) %>
-		<img src='<%= @profile.picture%>'>
+	<% @image = @profile.picture %>
+		<img id='profileImg' src="<%= url(@image)%>">
 		<h1><%= @user.username %></h1>
 		<p><%= @profile.bio %> </p>
 	<button id='makePost'>Create Post</button>
+	<a id='log-out' href='/log-out'>Log-Out</a>
 	</div>
 </div>
 
@@ -23,7 +25,7 @@
 	</div>
 =======
 <div class='row posts' id='<%=t.id%>'>
-<a method ="POST" href='posts/:id/edit'>edit</a>
+<a method ="POST" href='/posts/<%=t.id%>/edit'>edit</a>
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
 <h1><%=t.title%></h1>

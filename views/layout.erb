@@ -14,7 +14,11 @@
 			<div class='col-4' id='links'>
 				<ul>
 					<li><a href='/'>Home</a><li>
+					<% if session[:user_id] == nil %>
 					<li><a id='sign-in'>Sign In</a></li>
+					<% else %>
+					<li><a id='profile' href='/profile/:id'>Profile</a></li>
+					<%end%>
 				</ul>
 			</div>
 		</div>
@@ -36,6 +40,8 @@
 			</container>
 		</div>
 	</div>
+
+
 
 <script type="text/javascript" src="<%= url('scripts/jquery-3.js') %>" ></script>
 <script

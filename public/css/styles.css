@@ -1965,48 +1965,26 @@ button {
 .c-rating__item.is-active {
   background-position: -24px 0; }
 
-<<<<<<< HEAD
-=======
-#editModal {
-  text-align: center;
-  width: 40%;
-  height: 20%;
-  position: fixed;
-  right: 30%;
-  top: 20%;
-  z-index: 1000;
-  display: none;
-  overflow: hidden;
-  background-color: #ff8c00;
-  box-shadow: 0 0 40px black;
-  overflow: scroll; }
-  #editModal #modalHead {
-    margin-top: 50px;
-    font-size: 4em;
-    color: #ff8c00; }
-
-#blur3 {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: black;
-  top: 0;
-  display: none;
-  position: fixed;
-  opacity: 0.5; }
+#footer {
+  height: 27vh;
+  width: 64%;
+  margin-left: 20%;
+  margin-top: 17%; }
 
 #profileSide {
   text-align: center;
-  height: 50%;
+  height: 60%;
   background-color: #ff8c00;
   position: fixed; }
+  #profileSide #profileImg {
+    height: 40%;
+    width: 240px;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 800px; }
 
->>>>>>> master
 body {
   background-color: #E6ECF0; }
-
-.postStuff {
-  position: relative; }
 
 #postModal {
   text-align: center;
@@ -2054,7 +2032,7 @@ body {
   margin-left: 0; }
 
 .postStuff {
-  width: 40%;
+  width: 30%;
   height: 50%;
   color: black;
   background-color: #FFFFFF;

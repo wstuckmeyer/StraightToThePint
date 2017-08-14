@@ -4,39 +4,15 @@
 <%@reverse.each do |t| %>
 
 <div class='row posts'>
-<button class = "editPost" >edit</button>
+		<a href='/profile/:id/edit'><button class="editbtn">Edit</button></a>
+		<a href='/profile/:id/edit'><button class="delbtn">Delete</button></a>
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
-<h1><%=t.title%></h1>
-<p><%=t.content%></p>
-</div>
+		<h1><%=t.title%></h1>
+		<p><%=t.content%></p>
+	</div>
 </div>
 <%end%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -57,5 +33,6 @@
 			</container>
 		</div>
 	</div>
+
 
 	

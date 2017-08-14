@@ -25,6 +25,14 @@ get '/profile/:id' do
 	erb :show
 end
 
+get '/profile/:id/edit' do 
+	@user = User.find(session[:user_id])
+	@editTitle = Post.update(title: params[:title])
+	@editContent = Post.update(content: params[:content])
+	@editPost = Post.where(user_id: session[:user_id])
+	erb :edit
+end
+
 
 
 post '/sign-up' do

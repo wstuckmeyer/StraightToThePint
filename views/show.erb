@@ -14,6 +14,16 @@
 
 <%@reverse.each do |t| %>
 
+<<<<<<< HEAD
+<div class='row posts'>
+		<a href='/profile/:id/edit'><button class="editbtn">Edit</button></a>
+		<a href='/profile/:id/edit'><button class="delbtn">Delete</button></a>
+	<div class='col-4'></div>
+	<div class='col-4 postStuff'>
+		<h1><%=t.title%></h1>
+		<p><%=t.content%></p>
+	</div>
+=======
 <div class='row posts' id='<%=t.id%>'>
 <a method ="POST" href='/posts/<%=t.id%>/edit'>edit</a>
 	<div class='col-4'></div>
@@ -25,33 +35,9 @@
   <a type="submit" value="submit" value='delete' onclick='document.getElementById("deleteForm").submit()'>Delete</a>
 </form>
 </div>
+>>>>>>> master
 </div>
 <%end%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -72,5 +58,6 @@
 			</container>
 		</div>
 	</div>
+
 
 	

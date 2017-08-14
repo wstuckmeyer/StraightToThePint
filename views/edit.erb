@@ -1,3 +1,4 @@
+
 <% @post = Post.find(params[:id]) %>
 <form method="POST" action='/posts/<%=@post.id%>/edit'>
 	<label for='username'>Title</label>
@@ -8,3 +9,4 @@
 	<br>
 	<button type="submit" value="Submit" is='submit'>Post</button>
 </form>
+

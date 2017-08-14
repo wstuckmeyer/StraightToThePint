@@ -1,0 +1,92 @@
+$burnt-orange: #ff8c00;
+$yellow: #fecb01;
+$brown: #b44601;
+$light-green: #bdc901;
+$dark-green: #8aab00;
+#postModal{
+	text-align: center;
+	width:40%;
+	height:40%;
+	position: fixed;
+    right:30%;
+    top:20%;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+    background-color: $burnt-orange;
+    box-shadow: 0 0 40px black;
+    overflow:scroll;
+    #title{
+    	width:60%;
+    }
+    #content{
+    	width:60%;
+    	height:70%;
+    }
+    #modalHead{
+		margin-top:50px;
+		font-size:4em;
+		color:$burnt-orange;
+			
+}
+	
+}
+#blur2{
+	width:100%;
+	height:100%;
+	z-index: 2;
+	background-color: black;
+	top:0;
+	display:none;
+	position:fixed;
+	opacity:0.5;
+}
+
+#label{
+	color:$burnt-orange;
+	font-size: 4em;
+}
+#emailInput{
+	font-size:3em;
+	color:$burnt-orange;
+	height:40%;
+	width:40%;
+}
+
+#makePost{
+	margin-left:42%;
+	font-size:2em;
+	width:40%;
+	height:10%;
+	margin-left:0;
+}
+
+.postStuff{
+	width:30%;
+	height:50%;
+	color:#14171a;
+	background-color:#FFFFFF;
+	text-align:center;
+}
+.postHead{
+	margin-left:30%;
+	text-align:center;
+	color:black;
+	width:40%;
+	border-bottom:1px solid black;
+
+}
+.postBody{
+	color:black;
+}
+#postEdit{
+	margin-left:37%;
+	width:30%;
+	height:60%;
+	color:black;
+	background-color:$burnt-orange;
+	text-align:center;
+}
+#editz{
+	height:33%;
+}

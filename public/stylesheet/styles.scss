@@ -4,123 +4,68 @@
 @import 'navbar';
 @import 'rating';
 @import 'edit';
+@import 'post';
 $burnt-orange: #ff8c00;
 $yellow: #fecb01;
 $brown: #b44601;
 $light-green: #bdc901;
 $dark-green: #8aab00;
-#footer{
-	height: 27vh;
-    width: 64%;
-    margin-left: 20%;
-    margin-top: 17%;
+#profile-actions{
+	text-align: center;
+    margin-right: 100%;
+    position: fixed;
+    top: 23%;
+    height: 63%;
+
+    width: 28%;
+    background-color:$burnt-orange;
+    overflow:scroll;
+}
+#makePost,{
+	position:fixed;
+	font-size: 2em;
+    width: 28%;
+    height: 10%;
+    margin-left: -14%;
+}
+
+#streamPhoto{
+	margin-top:9%;
+	margin-left:8%;
+	width:70px;
+	height:10%;
+	float:left;
+}
+.footer{
+width:49%;
+
+}
+
+p{
+	font-size:2em;
+}
+h1{
+	font-size:3em;
 }
 #profileSide{
 	text-align:center;
-	height:60%;
+	height:70%;
 	background-color:$burnt-orange;
 	position:fixed;
 	#profileImg{
 		height:40%;
-		width:240px;
+		width:282px;
     	margin: 10px;
     	border:5px solid white;
-    	border-radius: 800px;
+    	border-radius: 800%;
 	}
 }
 
 a{
+
 	text-decoration:none;
 }
 
 body{
 	background-color:#E6ECF0;
-}
-
-#postModal{
-	text-align: center;
-	width:40%;
-	height:40%;
-	position: fixed;
-    right:30%;
-    top:20%;
-    z-index: 1000;
-    display: none;
-    overflow: hidden;
-    background-color: $burnt-orange;
-    box-shadow: 0 0 40px black;
-    overflow:scroll;
-    #title{
-    	width:60%;
-    }
-    #content{
-    	width:60%;
-    	height:70%;
-    }
-    #modalHead{
-		margin-top:50px;
-		font-size:4em;
-		color:$burnt-orange;
-			
-}
-	
-}
-#blur2{
-	width:100%;
-	height:100%;
-	z-index: 2;
-	background-color: black;
-	top:0;
-	display:none;
-	position:fixed;
-	opacity:0.5;
-}
-
-#label{
-	color:$burnt-orange;
-	font-size: 4em;
-}
-#emailInput{
-	font-size:3em;
-	color:$burnt-orange;
-	height:40%;
-	width:40%;
-}
-
-#makePost{
-	margin-left:42%;
-	font-size:2em;
-	width:100%;
-	height:20%;
-	margin-left:0;
-}
-
-.postStuff{
-	width:30%;
-	height:50%;
-	color:black;
-	background-color:#FFFFFF;
-	text-align:center;
-}
-.postHead{
-	margin-left:30%;
-	text-align:center;
-	color:black;
-	width:40%;
-	border-bottom:1px solid black;
-
-}
-.postBody{
-	color:black;
-}
-#postEdit{
-	margin-left:37%;
-	width:30%;
-	height:60%;
-	color:black;
-	background-color:$burnt-orange;
-	text-align:center;
-}
-#editz{
-	height:33%;
 }

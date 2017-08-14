@@ -1,14 +1,27 @@
+<div class='row'>
+	<div class='col-4' id='profileSide'>
+	<% @profile = Profile.find(session[:user_id])%>
+	<% @user = User.find(session[:user_id]) %>
+		<img src='<%= @profile.picture%>'>
+		<h1><%= @user.username %></h1>
+		<p><%= @profile.bio %> </p>
+	<button id='makePost'>Create Post</button>
+	</div>
+</div>
 
-<button id='makePost'>Create Post</button>
 
 <%@reverse.each do |t| %>
 
-<div class='row posts'>
-<button class = "editPost" >edit</button>
+<div class='row posts' id='<%=t.id%>'>
+<a method ="POST" href='posts/:id/edit'>edit</a>
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
 <h1><%=t.title%></h1>
 <p><%=t.content%></p>
+<form action="/posts/<%=t.id%>/delete" method="post" id='deleteForm'>
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <a type="submit" value="submit" value='delete' onclick='document.getElementById("deleteForm").submit()'>Delete</a>
+</form>
 </div>
 </div>
 <%end%>

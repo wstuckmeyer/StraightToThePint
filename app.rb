@@ -68,4 +68,23 @@ post '/profile/:id' do
 	erb :show
 
 end
+get 'posts/edit/:id' do
+	@post=Post.find_by_id(params[:id])
+	erb :edit
+	
+end
+patch '/posts/:id' do 
+  @post = Post.find_by_id(params[:id])
+  @post.title = params[:title]
+  @post.content = params[:content]
+  @post.save
+  redirect to "/posts/#{@post.id}"
+end
 
+delete '/posts/:id/delete' do 
+  @post = Post.find_by_id(params[:id])
+  @post.delete
+  @user = session[:user_id]
+  redirect to '/profile/' + @user.to_s
+  erb :show
+end

@@ -6,12 +6,13 @@
 <% @user = User.find(t.user_id )%>
 
 
-<div class='row posts'>
+<div class='row posts '>
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
 		<h1 class='postHead'><%=t.title%></h1>
 		<h6>By: <%=@user.username%></h6>
 		<p class='postBody'><%=t.content%></p>
+		<div class='postBody'></div>
 	</div>
 	<div class='col-4'></div>
 </div>
@@ -22,3 +23,4 @@
 	<footer >
 		<img id='footer' src='<%= url("images/bottles.png")%>'>
 	</footer>
+<script type="text/javascript" src="<%= url('scripts/rating.js') %>" ></script>

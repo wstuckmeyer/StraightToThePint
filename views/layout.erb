@@ -16,6 +16,7 @@
 					<li><a href='/'>Home</a><li>
 					<% if session[:user_id] == nil %>
 					<li><a id='sign-in'>Sign In</a></li>
+					<li><a href='/sign-up' id='sign-up'>Sign Up</a></li>
 					<% else %>
 					<li><a id='profile' href='/profile/:id'>Profile</a></li>
 					<%end%>

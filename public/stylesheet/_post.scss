@@ -1,76 +1,8 @@
-@import 'simple-grid';
-@import 'ui';
-@import 'sign-up-form';
-@import 'navbar';
-@import 'rating';
-@import 'edit';
-@import 'post';
 $burnt-orange: #ff8c00;
 $yellow: #fecb01;
 $brown: #b44601;
 $light-green: #bdc901;
 $dark-green: #8aab00;
-#profile-actions{
-	text-align: center;
-    margin-right: 100%;
-    position: fixed;
-    top: 23%;
-    height: 63%;
-
-    width: 28%;
-    background-color:$burnt-orange;
-    overflow:scroll;
-}
-#makePost,{
-	position:fixed;
-	font-size: 2em;
-    width: 28%;
-    height: 10%;
-    margin-left: -14%;
-}
-
-#streamPhoto{
-	margin-top:9%;
-	margin-left:8%;
-	width:70px;
-	height:10%;
-	float:left;
-}
-.footer{
-width:49%;
-
-}
-
-p{
-	font-size:2em;
-}
-h1{
-	font-size:3em;
-}
-#profileSide{
-	text-align:center;
-	height:70%;
-	background-color:$burnt-orange;
-	position:fixed;
-	#profileImg{
-		height:40%;
-		width:282px;
-    	margin: 10px;
-    	border:5px solid white;
-    	border-radius: 800%;
-	}
-}
-
-a{
-
-	text-decoration:none;
-}
-
-body{
-	background-color:#E6ECF0;
-}
-
-
 #postModal{
 	text-align: center;
 	width:40%;
@@ -124,15 +56,15 @@ body{
 #makePost{
 	margin-left:42%;
 	font-size:2em;
-	width:100%;
-	height:20%;
+	width:40%;
+	height:10%;
 	margin-left:0;
 }
 
 .postStuff{
 	width:30%;
 	height:50%;
-	color:black;
+	color:#14171a;
 	background-color:#FFFFFF;
 	text-align:center;
 }
@@ -158,4 +90,3 @@ body{
 #editz{
 	height:33%;
 }
-

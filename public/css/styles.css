@@ -1965,6 +1965,7 @@ button {
 .c-rating__item.is-active {
   background-position: -24px 0; }
 
+<<<<<<< HEAD
 .el {
   display: inline-flex; }
 
@@ -1992,6 +1993,8 @@ a {
 body {
   background-color: #E6ECF0; }
 
+=======
+>>>>>>> origin
 #postModal {
   text-align: center;
   width: 40%;
@@ -2038,14 +2041,14 @@ body {
 #makePost {
   margin-left: 42%;
   font-size: 2em;
-  width: 100%;
-  height: 20%;
+  width: 40%;
+  height: 10%;
   margin-left: 0; }
 
 .postStuff {
   width: 30%;
   height: 50%;
-  color: black;
+  color: #14171a;
   background-color: #FFFFFF;
   text-align: center; }
 
@@ -2070,4 +2073,58 @@ body {
 #editz {
   height: 33%; }
 
+<<<<<<< HEAD
+=======
+#profile-actions {
+  text-align: center;
+  margin-right: 100%;
+  position: fixed;
+  top: 23%;
+  height: 63%;
+  width: 28%;
+  background-color: #ff8c00;
+  overflow: scroll; }
+
+#makePost {
+  position: fixed;
+  font-size: 2em;
+  width: 28%;
+  height: 10%;
+  margin-left: -14%; }
+
+#streamPhoto {
+  margin-top: 9%;
+  margin-left: 8%;
+  width: 70px;
+  height: 10%;
+  float: left; }
+
+.footer {
+  width: 49%; }
+
+p {
+  font-size: 2em; }
+
+h1 {
+  font-size: 3em; }
+
+#profileSide {
+  text-align: center;
+  height: 70%;
+  background-color: #ff8c00;
+  position: fixed; }
+  #profileSide #profileImg {
+    height: 40%;
+    width: 282px;
+    margin: 10px;
+    border: 5px solid white;
+    border-radius: 800%; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #E6ECF0; }
+
+>>>>>>> origin
 /*# sourceMappingURL=styles.css.map */

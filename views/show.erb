@@ -6,9 +6,11 @@
 		<img id='profileImg' src="<%= url(@image)%>">
 		<h1><%= @user.username %></h1>
 		<p><%= @profile.bio %> </p>
-	<button id='makePost'>Create Post</button>
+	<!-- <button id='makePost'>New Review</button>
+	<br>
 	<a id='log-out' href='/log-out'>Log-Out</a>
 	</div>
+ -->
 </div>
 
 
@@ -19,24 +21,53 @@
 
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
-<h1><%=t.title%></h1>
-<p><%=t.content%></p>
-<form action="/posts/<%=t.id%>/delete" method="post" id='deleteForm'>
-  <input id="hidden" type="hidden" name="_method" value="delete">
-  <a type="submit" value="submit" value='delete' onclick='document.getElementById("deleteForm").submit()'>Delete</a>
-<a type='submit' method ="POST" href='/posts/<%=t.id%>/edit'>Edit</a>  
-</form>
-</div>
+
+
+		<h1><%=t.title%></h1>
+		<p><%=t.content%></p>
+		<form action="/posts/<%=t.id%>/delete" method="post" id='deleteForm'>
+  			<input id="hidden" type="hidden" name="_method" value="delete">
+ 			<a type="submit" value="submit" value='delete' onclick='document.getElementById("deleteForm").submit()'>Delete</a>
+			<a type='submit' method ="POST" href='/posts/<%=t.id%>/edit'>Edit</a>  
+		</form>
+	</div>
+	
+
 
 </div>
 <%end%>
-
+<container id='rightStuff'>
+<div class='row' id='actions'>
+<div class='col-4'></div>
+<div class='col-4'></div>
+<div class='col-4'>
+		<div id='profile-actions'>
+			<button id='makePost'>New Review</button>
+			<br>
+			<a id='log-out' href='/log-out'>Log-Out</a>
+			<div id='rightPost'>
+				<h1>Recent Posts:</h1>
+				<% @postsr = Post.last(10).reverse %>
+				<% @postsr.each do |t| %>
+				<% @user = User.find(t.user_id )%>
+				<% @profile = Profile.find(@user.id) %>
+				
+				<img id='streamPhoto' src='<%= url(@profile.picture)%>'>
+				<h1 class='postHead'><%=t.title%></h1>
+				<h6>By: <%=@user.username%></h6>
+				<p class='postBody'><%=t.content%></p>
+				<%end%>
+			</div>
+		</div>
+	</div>
+	</container>
 
 
 
 <container id='blur2'></container>
 	<div id="postModal">
 		<container id="postModalContent">
+		<a id='close'
 			<h1>Create new Post</h1>
 				<form method="POST" action='/profile/:id'>
 					<label for='username'>Beer Name</label>

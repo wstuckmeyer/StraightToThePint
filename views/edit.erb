@@ -1,0 +1,10 @@
+<% @post = Post.find(params[:id]) %>
+<form method="POST" action='/posts/<%=@post.id%>/edit'>
+	<label for='username'>Title</label>
+	<input type="text" name="title" id="title" placeholder="<%=@post.title%>">
+	<br>
+	<label for='password'>Content</label>
+	<textarea id='content' name='content' placeholder="<%=@post.content%>"></textarea>
+	<br>
+	<button type="submit" value="Submit" is='submit'>Post</button>
+</form>

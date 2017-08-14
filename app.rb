@@ -60,17 +60,18 @@ post '/profile/:id' do
 	erb :show
 
 end
-get 'posts/edit/:id' do
+get '/posts/:id/edit' do
 	@post=Post.find_by_id(params[:id])
 	erb :edit
 	
 end
-patch '/posts/:id' do 
+post '/posts/:id/edit' do 
+  @user = session[:user_id]
   @post = Post.find_by_id(params[:id])
   @post.title = params[:title]
   @post.content = params[:content]
   @post.save
-  redirect to "/posts/#{@post.id}"
+  redirect to "/profile/" + @user.to_s
 end
 
 delete '/posts/:id/delete' do 
@@ -79,4 +80,10 @@ delete '/posts/:id/delete' do
   @user = session[:user_id]
   redirect to '/profile/' + @user.to_s
   erb :show
+end
+
+get '/log-out' do
+	session.clear
+	redirect '/'
+	erb :home
 end

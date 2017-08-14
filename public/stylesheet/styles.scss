@@ -29,7 +29,9 @@ $dark-green: #8aab00;
 	}
 }
 
-
+a{
+	text-decoration:none;
+}
 
 body{
 	background-color:#E6ECF0;
@@ -38,7 +40,7 @@ body{
 #postModal{
 	text-align: center;
 	width:40%;
-	height:20%;
+	height:40%;
 	position: fixed;
     right:30%;
     top:20%;
@@ -48,6 +50,13 @@ body{
     background-color: $burnt-orange;
     box-shadow: 0 0 40px black;
     overflow:scroll;
+    #title{
+    	width:60%;
+    }
+    #content{
+    	width:60%;
+    	height:70%;
+    }
     #modalHead{
 		margin-top:50px;
 		font-size:4em;
@@ -103,4 +112,15 @@ body{
 }
 .postBody{
 	color:black;
+}
+#postEdit{
+	margin-left:37%;
+	width:30%;
+	height:60%;
+	color:black;
+	background-color:$burnt-orange;
+	text-align:center;
+}
+#editz{
+	height:33%;
 }

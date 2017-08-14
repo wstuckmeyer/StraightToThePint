@@ -1,19 +1,19 @@
 <div class = "container">
 	<div class = "row">
 		<div class = "col-12">
-		<form id ="signup" method = "post" action = "./sign-up">
-			<label class = signuplabel for "username">Create a Username:</label>
+		<form id ="signup" method = "post" action = "/sign-up">
+			<label class = signuplabel for="username">Create a Username:</label>
 				<input type = "text" name= "username">
-			<label class = signuplabel for "password">Create a password:</label>
+			<label class = signuplabel for="password">Create a password:</label>
 				<input type="password" name="password">
 				<br>
-			<label class = signuplabel for "pic">Choose a Profile Pic! </label>
-			  <input type="file" name="pic" accept="image/*">
+			<label class = signuplabel for="picture">Choose a Profile Pic! </label>
+			  <input type="file" name="picture">
 			  <br>
 			<label class = signuplabel for "content">Write a short bio of yourself</label>
 			   <br>
 				<!-- add the style to css when ready -->
-			  <textarea name="content" style="margin: 0px; width: 585px; height: 179px;"></textarea>
+			  <textarea name="bio" style="margin: 0px; width: 585px; height: 179px;"></textarea>
 			  <br>
 			  <input class= "ui-button ui-widget ui-corner-all" type= "submit">
 		</form>

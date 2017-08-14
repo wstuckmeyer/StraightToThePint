@@ -37,6 +37,8 @@ end
 
 post '/sign-up' do
 	@newUser = User.create(username: params[:username], password: params[:password])
+	
+	Profile.create(picture: 'images/'+params[:picture], bio: params[:bio], user_id: @newUser.id)
 	if @newUser == User.where(username: params[:username])
 		redirect '/'
 	else

@@ -14,18 +14,9 @@
 
 <%@reverse.each do |t| %>
 
-<<<<<<< HEAD
-<div class='row posts'>
-		<a href='/profile/:id/edit'><button class="editbtn">Edit</button></a>
-		<a href='/profile/:id/edit'><button class="delbtn">Delete</button></a>
-	<div class='col-4'></div>
-	<div class='col-4 postStuff'>
-		<h1><%=t.title%></h1>
-		<p><%=t.content%></p>
-	</div>
-=======
+
 <div class='row posts' id='<%=t.id%>'>
-<a method ="POST" href='/posts/<%=t.id%>/edit'>edit</a>
+
 	<div class='col-4'></div>
 	<div class='col-4 postStuff'>
 <h1><%=t.title%></h1>
@@ -33,9 +24,10 @@
 <form action="/posts/<%=t.id%>/delete" method="post" id='deleteForm'>
   <input id="hidden" type="hidden" name="_method" value="delete">
   <a type="submit" value="submit" value='delete' onclick='document.getElementById("deleteForm").submit()'>Delete</a>
+<a type='submit' method ="POST" href='/posts/<%=t.id%>/edit'>Edit</a>  
 </form>
 </div>
->>>>>>> master
+
 </div>
 <%end%>
 
@@ -47,10 +39,12 @@
 		<container id="postModalContent">
 			<h1>Create new Post</h1>
 				<form method="POST" action='/profile/:id'>
-					<label for='username'>Title</label>
+					<label for='username'>Beer Name</label>
+					<br>
 					<input type="text" name="title" id="title">
 					<br>
-					<label for='password'>Content</label>
+					<label for='password'>Review</label>
+					<br>
 					<textarea id='content' name='content'></textarea>
 					<br>
 					<button type="submit" value="Submit" is='submit'>Post</button>

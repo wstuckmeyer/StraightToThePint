@@ -1983,13 +1983,18 @@ button {
     border: 5px solid white;
     border-radius: 800px; }
 
+
+a {
+  text-decoration: none; }
+
+
 body {
   background-color: #E6ECF0; }
 
 #postModal {
   text-align: center;
   width: 40%;
-  height: 20%;
+  height: 40%;
   position: fixed;
   right: 30%;
   top: 20%;
@@ -1999,6 +2004,11 @@ body {
   background-color: #ff8c00;
   box-shadow: 0 0 40px black;
   overflow: scroll; }
+  #postModal #title {
+    width: 60%; }
+  #postModal #content {
+    width: 60%;
+    height: 70%; }
   #postModal #modalHead {
     margin-top: 50px;
     font-size: 4em;
@@ -2047,5 +2057,16 @@ body {
 
 .postBody {
   color: black; }
+
+#postEdit {
+  margin-left: 37%;
+  width: 30%;
+  height: 60%;
+  color: black;
+  background-color: #ff8c00;
+  text-align: center; }
+
+#editz {
+  height: 33%; }
 
 /*# sourceMappingURL=styles.css.map */

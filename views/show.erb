@@ -6,11 +6,11 @@
 		<img id='profileImg' src="<%= url(@image)%>">
 		<h1><%= @user.username %></h1>
 		<p><%= @profile.bio %> </p>
-	<!-- <button id='makePost'>New Review</button>
+	<button id='makePost'>New Review</button>
 	<br>
 	<a id='log-out' href='/log-out'>Log-Out</a>
 	</div>
- -->
+
 </div>
 
 
@@ -67,7 +67,7 @@
 <container id='blur2'></container>
 	<div id="postModal">
 		<container id="postModalContent">
-		<a id='close'
+		<a id='close'>
 			<h1>Create new Post</h1>
 				<form method="POST" action='/profile/:id'>
 					<label for='username'>Beer Name</label>

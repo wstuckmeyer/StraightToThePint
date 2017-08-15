@@ -2077,6 +2077,7 @@ h1 {
   font-size: 3em; }
 
 #profileSide {
+  z-index: 20;
   text-align: center;
   height: 70%;
   background-color: #ff8c00;

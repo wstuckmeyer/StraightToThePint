@@ -16,7 +16,6 @@ $dark-green: #8aab00;
     position: fixed;
     top: 23%;
     height: 63%;
-
     width: 28%;
     background-color:$burnt-orange;
     overflow:scroll;
@@ -48,6 +47,7 @@ h1{
 	font-size:3em;
 }
 #profileSide{
+	z-index: 20;
 	text-align:center;
 	height:70%;
 	background-color:$burnt-orange;

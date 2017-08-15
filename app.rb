@@ -92,8 +92,33 @@ delete '/posts/:id/delete' do
   erb :show
 end
 
+delete '/user/:id/delete' do 
+  @user = User.find(session[:user_id])
+  @post = Post.where(user_id: session[:user_id])
+  @post.each do |t|
+  	t.delete
+  	puts 'Hellloooo therereerere'
+  end
+  @profile = Profile.find(session[:user_id])
+  @profile.delete
+  @user.delete
+  session.clear
+  redirect '/'
+  erb :home
+end
 get '/log-out' do
 	session.clear
 	redirect '/'
 	erb :home
+end
+
+get '/users/:id' do
+
+	@user=User.find_by_id(params[:id])
+	if @user.id == session[:user_id]
+		
+		redirect 'profile/' + session[:user_id].to_s
+	else
+	erb :profile
+end
 end

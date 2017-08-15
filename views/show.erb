@@ -6,17 +6,13 @@
 		<img id='profileImg' src="<%= url(@image)%>">
 		<h1><%= @user.username %></h1>
 		<p><%= @profile.bio %> </p>
-	<!-- <button id='makePost'>New Review</button>
-	<br>
-	<a id='log-out' href='/log-out'>Log-Out</a>
+		<form action="/user/<%=@user.id%>/delete" method="post" id='deleteAcct'>
+  			<input id="hidden" type="hidden" name="_method" value="delete">
+ 			<a type="submit" value="submit" value='delete' onclick='document.getElementById("deleteAcct").submit()'>Delete Account</a>
+		</form>
+
 	</div>
- -->
-</div>
-
-
 <%@reverse.each do |t| %>
-
-
 <div class='row posts' id='<%=t.id%>'>
 
 	<div class='col-4'></div>
@@ -29,8 +25,6 @@
 			<a type='submit' method ="POST" href='/posts/<%=t.id%>/edit'>Edit</a>  
 		</form>
 	</div>
-	
-
 </div>
 <%end%>
 <container id='rightStuff'>
@@ -58,9 +52,6 @@
 		</div>
 	</div>
 	</container>
-
-
-
 <container id='blur2'></container>
 	<div id="postModal">
 		<container id="postModalContent">
@@ -76,7 +67,7 @@
 					<textarea id='content' name='content'></textarea>
 					<br>
 					<button type="submit" value="Submit" is='submit'>Post</button>
-			</form>
+				</form>
 			</container>
 		</div>
 	</div>

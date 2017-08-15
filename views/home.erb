@@ -12,7 +12,7 @@
 	<div class='col-4 postStuff'>
 		<img id='streamPhoto' src='<%= url(@profile.picture)%>'>
 		<h1 class='postHead'><%=t.title%></h1>
-		<h6>By: <%=@user.username%></h6>
+		<h6><a href='/users/<%=t.user_id%>'>By: <%=@user.username%></a></h6>
 		<p class='postBody'><%=t.content%></p>
 	</div>
 	<div class='col-4'></div>

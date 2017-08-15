@@ -1,0 +1,28 @@
+<% @user = User.find(params[:id]) %>
+<% @posts = Post.where(user_id: @user.id) %>
+<div class='row'>
+	<div class='col-4' id='profileSide'>
+	<% @profile = Profile.find(@user.id)%>
+	
+	<% @image = @profile.picture %>
+		<img id='profileImg' src="<%= url(@image)%>">
+		<h1><%= @user.username %></h1>
+		<p><%= @profile.bio %> </p>
+	</div>
+<% @posts.each do |t| %>
+
+<% @profile = Profile.find(@user.id) %>
+
+
+<div class='row posts'>
+	<div class='col-4'></div>
+	<div class='col-4 postStuff'>
+		<img id='streamPhoto' src='<%= url(@profile.picture)%>'>
+		<h1 class='postHead'><%=t.title%></h1>
+		<h6>By: <%=@user.username%></h6>
+		<p class='postBody'><%=t.content%></p>
+	</div>
+	<div class='col-4'></div>
+</div>
+
+<%end%>
